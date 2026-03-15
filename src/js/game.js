@@ -26,6 +26,7 @@ const Game = {
         Bee.init();
 
         Game.backgroundMusic = new Audio("../src/audio/flight_of_the_bumblebee_2.mp3");
+        Game.backgroundMusic.playbackRate = 0.5;
         Game.backgroundMusic.loop = true;
     },
 
@@ -92,6 +93,10 @@ const Game = {
     stopBackgroundMusic: () => {
         Game.backgroundMusic.pause();
         Game.backgroundMusic.currentTime = 0; // Reset to the beginning
+    },
+
+    increasePlaybackSpeed: (level) => {
+        audio.playbackRate = 0.5 + (level * 0.1); // Adjust the multiplier as needed
     },
 };
 

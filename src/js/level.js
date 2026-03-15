@@ -1,4 +1,4 @@
-import Game from "./game.js";
+﻿import Game from "./game.js";
 import Levels from "./levels.js";
 import Hive from "./hive.js";
 import Bee from "./bee.js";
@@ -17,12 +17,14 @@ const Level = {
     Level.lightningPeakBolster = 0,
     Level.birdTopOffset={min:20,max:70},
     Bee.init();
-    Hive.init();
+      Hive.init();
+      Game.increasePlaybackSpeed(Level.current);
 		Game.rainEffect = false;
     $(".level").html(Level.current);
     $("#start").html("Start Level " + Level.current);
-    Object.assign(Level, Levels["l" + Level.current]);
+      Object.assign(Level, Levels["l" + Level.current]);
   },
+
 
   complete: () => {
     Game.stop();
