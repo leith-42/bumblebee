@@ -25,7 +25,7 @@ const Game = {
         Hive.init();
         Bee.init();
 
-        Game.backgroundMusic = new Audio("../audio/flight_of_the_bumblebee_2.mp3");
+        Game.backgroundMusic = new Audio("../src/audio/flight_of_the_bumblebee_2.mp3");
         Game.backgroundMusic.loop = true;
     },
 
