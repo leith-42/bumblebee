@@ -9,6 +9,10 @@ const Game = {
     backgroundMusic: null,
 
     init: () => {
+        Game.backgroundMusic = new Audio("../src/audio/flight_of_the_bumblebee_2.mp3");
+        Game.backgroundMusic.playbackRate = 0.5;
+        Game.backgroundMusic.loop = true;
+
         Level.current = 1;
         Game.lives = 5;
         Game.score = 0;
@@ -25,9 +29,7 @@ const Game = {
         Hive.init();
         Bee.init();
 
-        Game.backgroundMusic = new Audio("../src/audio/flight_of_the_bumblebee_2.mp3");
-        Game.backgroundMusic.playbackRate = 0.5;
-        Game.backgroundMusic.loop = true;
+       
     },
 
     start: () => {
