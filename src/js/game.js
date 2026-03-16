@@ -96,7 +96,7 @@ const Game = {
     },
 
     increasePlaybackSpeed: (level) => {
-        audio.playbackRate = 0.5 + (level * 0.1); // Adjust the multiplier as needed
+        Game.backgroundMusic.playbackRate = 0.5 + (level * 0.1); // Adjust the multiplier as needed
     },
 };
 
